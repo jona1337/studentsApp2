@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jonacom.students.view.root.RootLayoutController">
+<top><MenuBar BorderPane.alignment="CENTER">
+  <menus>
+    <Menu mnemonicParsing="false" text="File">
+      <items>
+        <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Close" />
+      </items>
+    </Menu>
+    <Menu mnemonicParsing="false" text="Content">
+               <items>
+                  <RadioMenuItem mnemonicParsing="false" onAction="#handleShowStudentsContent" selected="true" text="Students">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="contentToggleGroup" />
+                     </toggleGroup></RadioMenuItem>
+                  <RadioMenuItem mnemonicParsing="false" onAction="#handleShowGroupsContent" text="Groups" toggleGroup="$contentToggleGroup" />
+               </items>
+    </Menu>
+    <Menu mnemonicParsing="false" text="Help">
+      <items>
+        <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="About" />
+      </items>
+    </Menu>
+  </menus>
+</MenuBar>
+</top></BorderPane>
